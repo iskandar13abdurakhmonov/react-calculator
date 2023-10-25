@@ -61,7 +61,11 @@ body {
 }
 
 [class*="__container"] {
-    max-width: 1254px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.App {
+  background-color: hsl(222, 26%, 31%);
 }
