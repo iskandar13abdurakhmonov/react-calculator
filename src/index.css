@@ -69,3 +69,28 @@ body {
 .App {
   background-color: hsl(222, 26%, 31%);
 }
+
+.main__container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.calculator {
+  width: 540px;
+}
+
+.top {
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  margin: 0 0 0 0;
+
+}
