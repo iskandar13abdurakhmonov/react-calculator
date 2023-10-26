@@ -1,3 +1,4 @@
+import Bottom from "./components/Bottom"
 import Calculator from "./components/Calculator"
 import Top from "./components/Top"
 
@@ -9,6 +10,7 @@ function App() {
                     <div className="main__container">
                       <Calculator>
                         <Top/>
+                        <Bottom/>
                       </Calculator>
                     </div>
                 </main>

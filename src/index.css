@@ -46,6 +46,7 @@ body {
 body {
     font-family: 'League Spartan', sans-serif;
     font-size: 32px;
+    font-weight: 700;
     color: #000;
 }
 
@@ -77,14 +78,17 @@ body {
 }
 
 .calculator {
+  margin: 109px 0 0 0;
   width: 540px;
 }
 
 .top {
+  margin: 0 0 24px 0;
   width: 100%;
 }
 
 .header-top {
+  margin: 0 0 31px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,5 +96,78 @@ body {
 
 .header-logo {
   margin: 0 0 0 0;
-
+  font-size: 25px;
+  color: hsl(30, 25%, 89%);
 }
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch-text {
+  margin: 0 0 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(30, 25%, 89%);
+}
+
+.header-bottom {
+  padding: 30px 0 29px 381px;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 8px;
+  max-height: 127px;
+}
+
+.output-panel {
+  color: hsl(30, 25%, 89%);
+  font-size: 38px;
+}
+
+.bottom {
+  background-color: hsl(223, 31%, 20%);
+  padding: 31px 0 31px 0;
+  border-radius: 8px;
+}
+
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(4, 101px);
+  gap: 25px;
+  justify-content: center;
+}
+
+.key {
+  padding: 4px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101px;
+  height: 64px;
+  border-radius: 7px;
+}
+
+.key-white {
+  color: hsl(221, 14%, 31%);
+  background-color: hsl(30, 25%, 89%);
+  border-bottom: 4px solid hsl(28, 16%, 65%);
+}
+
+.key-blue {
+  color: hsl(0, 0%, 100%);
+  text-transform: uppercase;
+  background-color: hsl(225, 21%, 49%);
+  border-bottom: 4px solid hsl(224, 28%, 35%);
+}
+
+.key-red {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(6, 63%, 50%);
+  border-bottom: 4px solid hsl(6, 70%, 34%);
+}
+
+.bottom-keys {
+  grid-column: 2 span;
+  width: 227px;
+}
+
