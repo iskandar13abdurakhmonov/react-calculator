@@ -1,6 +1,7 @@
-import Bottom from "./components/Bottom"
-import Calculator from "./components/Calculator"
-import Top from "./components/Top"
+import Bottom from './components/Bottom'
+import Calculator from './components/Calculator'
+import Top from './components/Top'
+import { CalculatorProvider } from './context/context'
 
 function App() {
     return (
@@ -8,10 +9,12 @@ function App() {
             <div className="wrapper">
                 <main className="main">
                     <div className="main__container">
-                      <Calculator>
-                        <Top/>
-                        <Bottom/>
-                      </Calculator>
+                        <CalculatorProvider>
+                            <Calculator>
+                                <Top />
+                                <Bottom />
+                            </Calculator>
+                        </CalculatorProvider>
                     </div>
                 </main>
             </div>
