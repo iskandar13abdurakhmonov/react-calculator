@@ -113,7 +113,10 @@ body {
 }
 
 .header-bottom {
-  padding: 30px 0 29px 381px;
+  padding: 41px 34px 41px 0;
+  display: flex;
+  justify-content: end;
+  width: 100%;
   background-color: hsl(224, 36%, 15%);
   border-radius: 8px;
   max-height: 127px;
@@ -125,24 +128,27 @@ body {
 }
 
 .bottom {
+  padding: 15px 15px 15px 15px;
+  width: 100%;
   background-color: hsl(223, 31%, 20%);
-  padding: 31px 0 31px 0;
   border-radius: 8px;
 }
 
 .numpad {
   display: grid;
-  grid-template-columns: repeat(4, 101px);
-  gap: 25px;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  align-items: center;
 }
 
 .key {
+  margin: 15px;
   padding: 4px 0 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 101px;
+  max-width: 101px;
   height: 64px;
   border-radius: 7px;
 }
@@ -183,6 +189,6 @@ body {
 
 .bottom-keys {
   grid-column: 2 span;
-  width: 227px;
+  max-width: 236px;
 }
 
