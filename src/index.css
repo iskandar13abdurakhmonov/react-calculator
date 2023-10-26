@@ -151,6 +151,11 @@ body {
   color: hsl(221, 14%, 31%);
   background-color: hsl(30, 25%, 89%);
   border-bottom: 4px solid hsl(28, 16%, 65%);
+  transition: 0.3s ease-in;
+}
+
+.key-white:hover {
+  background-color: hsl(0, 0%, 100%);
 }
 
 .key-blue {
@@ -158,12 +163,22 @@ body {
   text-transform: uppercase;
   background-color: hsl(225, 21%, 49%);
   border-bottom: 4px solid hsl(224, 28%, 35%);
+  transition: 0.3s ease-in;
+}
+
+.key-blue:hover {
+  background-color: hsl(225, 51%, 76%);
 }
 
 .key-red {
   color: hsl(0, 0%, 100%);
   background-color: hsl(6, 63%, 50%);
   border-bottom: 4px solid hsl(6, 70%, 34%);
+  transition: 0.3s ease-in;
+}
+
+.key-red:hover {
+  background-color: hsl(6, 93%, 67%);
 }
 
 .bottom-keys {
