@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Switch from 'react-switch'
+import { useCalculator } from '../context/context'
 
 export default function Top() {
     const [isChecked, setIsChecked] = useState(false)
@@ -7,6 +8,8 @@ export default function Top() {
     const handleChange = () => {
         setIsChecked(!isChecked)
     }
+
+    const { result } = useCalculator()
 
     return (
         <div className="top">
@@ -24,7 +27,7 @@ export default function Top() {
             </div>
             <div className="header-bottom">
                 <div className="output-panel">
-                    <p className="output">399,981</p>
+                    <p className="output">{result}</p>
                 </div>
             </div>
         </div>

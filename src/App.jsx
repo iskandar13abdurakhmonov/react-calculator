@@ -4,6 +4,8 @@ import Top from './components/Top'
 import { CalculatorProvider } from './context/context'
 
 function App() {
+
+
     return (
         <div className="App">
             <div className="wrapper">
@@ -11,7 +13,7 @@ function App() {
                     <div className="main__container">
                         <CalculatorProvider>
                             <Calculator>
-                                <Top />
+                                <Top/>
                                 <Bottom />
                             </Calculator>
                         </CalculatorProvider>
