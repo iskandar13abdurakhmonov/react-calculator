@@ -1,7 +1,12 @@
-export default function Bottom() {
+/* eslint-disable react/prop-types */
+import DigitButton from "./DigitButton"
+
+export default function Bottom({ dispatch }) {
+    
     return (
         <div className="bottom">
             <div className="numpad">
+                <DigitButton digit='7' dispatch={dispatch}/>
                 <button className="key key-white">7</button>
                 <button className="key key-white">8</button>
                 <button className="key key-white">9</button>
