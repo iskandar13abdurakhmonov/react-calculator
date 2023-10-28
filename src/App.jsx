@@ -98,15 +98,6 @@ const App = () => {
         }
     }
 
-    const invertClickHandler = () => {
-        setCalc({
-            ...calc,
-            num: calc.num ? toLocaleString(removeSpaces(calc.num) * -1) : 0,
-            res: calc.res ? toLocaleString(removeSpaces(calc.res) * -1) : 0,
-            sign: '',
-        })
-    }
-
     const percentClickHandler = () => {
         let num = calc.num ? parseFloat(removeSpaces(calc.num)) : 0
         let res = calc.res ? parseFloat(removeSpaces(calc.res)) : 0
@@ -161,8 +152,6 @@ const App = () => {
                                                 btn === 'C'
                                                     ? resetClickHandler
                                                     : btn === '+-'
-                                                    ? invertClickHandler
-                                                    : btn === '%'
                                                     ? percentClickHandler
                                                     : btn === '='
                                                     ? equalsClickHandler
