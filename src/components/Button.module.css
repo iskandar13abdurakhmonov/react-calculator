@@ -1,23 +1,49 @@
-button {
-    border: none;
-    background-color: rgb(80, 60, 209);
-    font-size: 24px;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 10px;
-    outline: none;
-  }
-  
-  button:hover {
-    background-color: rgb(61, 43, 184);
-  }
-  
-  .equals {
-    grid-column: 3 / 5;
-    background-color: rgb(243, 61, 29);
-  }
-  
-  .equals:hover {
-    background-color: rgb(228, 39, 15);
-  }
+.key {
+    margin: 15px;
+    padding: 4px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 101px;
+    height: 64px;
+    border-radius: 7px;
+}
+
+.keyWhite {
+    color: hsl(221, 14%, 31%);
+    background-color: hsl(30, 25%, 89%);
+    border-bottom: 4px solid hsl(28, 16%, 65%);
+    transition: 0.3s ease-in;
+}
+
+.keyWhite:hover {
+    background-color: hsl(0, 0%, 100%);
+}
+
+.keyBlue {
+    color: hsl(0, 0%, 100%);
+    text-transform: uppercase;
+    background-color: hsl(225, 21%, 49%);
+    border-bottom: 4px solid hsl(224, 28%, 35%);
+    transition: 0.3s ease-in;
+}
+
+.keyBlue:hover {
+    background-color: hsl(225, 51%, 76%);
+}
+
+.keyRed {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(6, 63%, 50%);
+    border-bottom: 4px solid hsl(6, 70%, 34%);
+    transition: 0.3s ease-in;
+}
+
+.keyRed:hover {
+    background-color: hsl(6, 93%, 67%);
+}
+
+.bottomKeys {
+    grid-column: 2 span;
+    max-width: 236px;
+}

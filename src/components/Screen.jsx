@@ -3,8 +3,8 @@ import styles from  "./Screen.module.css";
 
 const Screen = ({ value }) => {
   return (
-    <div className={styles.screen}>
-      {value}
+    <div className={styles.headerBottom}>
+      <p className={styles.outputPanel}>{value}</p>
     </div>
   );
 };

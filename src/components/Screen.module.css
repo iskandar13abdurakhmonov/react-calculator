@@ -1,11 +1,14 @@
-.screen {
-  /* Set the maximum font size */
-  font-size: 70px;
+.headerBottom {
+  padding: 41px 34px 41px 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  background-color: hsl(224, 36%, 15%);
+  border-radius: 8px;
+  max-height: 127px;
+}
 
-  /* Make the text overflow hidden */
-  overflow: hidden;
-
-  /* Set the text to fit the width of the container */
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.outputPanel {
+  color: hsl(30, 25%, 89%);
+  font-size: 38px;
 }
