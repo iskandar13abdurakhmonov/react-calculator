@@ -11,7 +11,7 @@ const btnValues = [
     [7, 8, 9, 'DEL'],
     [4, 5, 6, '+'],
     [1, 2, 3, '-'],
-    ['.', 0, '/', 'X'],
+    ['.', 0, '/', 'x'],
     ['C', '='],
 ]
 
@@ -76,7 +76,7 @@ const App = () => {
                     ? a + b
                     : sign === '-'
                     ? a - b
-                    : sign === 'X'
+                    : sign === 'x'
                     ? a * b
                     : a / b
 
@@ -156,7 +156,7 @@ const App = () => {
                                                     : btn === '='
                                                     ? equalsClickHandler
                                                     : btn === '/' ||
-                                                      btn === 'X' ||
+                                                      btn === 'x' ||
                                                       btn === '-' ||
                                                       btn === '+'
                                                     ? signClickHandler
