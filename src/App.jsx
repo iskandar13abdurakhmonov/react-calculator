@@ -80,7 +80,28 @@ function App() {
             ...calc,
             num: calc.num ? calc.num * -1 : 0,
             res: calc.res ? calc.res * -1 : 0,
-            sign: ''
+            sign: '',
+        })
+    }
+
+    const percentClickHandler = () => {
+        let num = calc.num ? parseFloat(calc.num) : 0
+        let res = calc.res ? parseFloat(calc.res) : 0
+
+        setCalc({
+            ...calc,
+            num: (num /= Math.pow(100, 1)),
+            res: (res /= Math.pow(100, 1)),
+            sign: '',
+        })
+    }
+
+    const resetClickHandler = () => {
+        setCalc({
+            ...calc,
+            sign: '',
+            num: 0,
+            res: 0,
         })
     }
 
