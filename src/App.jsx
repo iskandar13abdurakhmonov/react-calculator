@@ -22,6 +22,11 @@ function App() {
         res: 0,
     })
 
+    const toLocaleString = (num) =>
+        String(num).replace(/(?<!\..*)(\d)(?=(?:\d{3})+(?:\.|$))/g, '$1 ')
+
+    const removeSpaces = (num) => num.toString().replace(/\s/g, '')
+
     const numClickHandler = (e) => {
         e.preventDefault()
         const value = e.target.innerHTML
@@ -52,6 +57,18 @@ function App() {
         })
     }
 
+    const signClickHandler = (e) => {
+        e.preventDefault()
+        const value = e.target.innerHTML
+
+        setCalc({
+            ...calc,
+            sign: value,
+            res: !calc.res && calc.num ? calc.num : calc.res,
+            num: 0,
+        })
+    }
+
     const equalsClickHandler = () => {
         if (calc.sign && calc.num) {
             const math = (a, b, sign) =>
@@ -68,7 +85,11 @@ function App() {
                 res:
                     calc.num === '0' && calc.sign === '/'
                         ? "Can't divide with 0"
-                        : math(Number(calc.res), Number(calc.num), calc.sign),
+                        : math(
+                              Number(removeSpaces(calc.res)),
+                              Number(removeSpaces(calc.num)),
+                              calc.sign
+                          ),
                 sign: '',
                 num: 0,
             })
@@ -78,15 +99,15 @@ function App() {
     const invertClickHandler = () => {
         setCalc({
             ...calc,
-            num: calc.num ? calc.num * -1 : 0,
-            res: calc.res ? calc.res * -1 : 0,
+            num: calc.num ? toLocaleString(removeSpaces(calc.num) * -1) : 0,
+            res: calc.res ? toLocaleString(removeSpaces(calc.res) * -1) : 0,
             sign: '',
         })
     }
 
     const percentClickHandler = () => {
-        let num = calc.num ? parseFloat(calc.num) : 0
-        let res = calc.res ? parseFloat(calc.res) : 0
+        let num = calc.num ? parseFloat(removeSpaces(calc.num)) : 0
+        let res = calc.res ? parseFloat(removeSpaces(calc.res)) : 0
 
         setCalc({
             ...calc,
