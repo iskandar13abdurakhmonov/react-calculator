@@ -1,48 +1,94 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable no-undef */
-import { useReducer } from 'react'
-import Bottom from './components/Bottom'
-import Calculator from './components/Calculator'
-import Top from './components/Top'
+import { useState } from 'react'
 
-export const ACTIONS = {
-    ADD_DIGIT: 'add-digit',
-    CHOOSE_OPERATION: 'choose-operation',
-    CLEAR: 'clear',
-    DELETE_DIGIT: 'delete-digit',
-    EVALUATE: 'evaluate',
-}
+import Wrapper from './components/Wrapper'
+import Screen from './components/Screen'
+import ButtonBox from './components/ButtonBox'
+import Button from './components/Button'
 
-function reducer(state, { type, payload }) {
-    switch (type) {
-        case ACTIONS.ADD_DIGIT:
-            return {
-                ...state,
-                currentOperand: `${currentOperand || ''}${payload.digit}`,
-            }
-    }
-}
+const btnValues = [
+    ['C', '+-', '%', '/'],
+    [7, 8, 9, 'X'],
+    [4, 5, 6, '-'],
+    [1, 2, 3, '+'],
+    [0, '.', '='],
+]
 
 function App() {
-    const [{ currentOperand, previousOperand, operation }, dispatch] =
-        useReducer(reducer, {})
+    const [calc, setCalc] = useState({
+        sign: '',
+        num: 0,
+        res: 0,
+    })
 
+    const numClickHandler = (e) => {
+        e.preventDefault()
+        const value = e.target.innerHTML
+
+        if (calc.num.length < 16) {
+            setCalc({
+                ...calc,
+                num:
+                    calc.num === 0 && value === '0'
+                        ? '0'
+                        : calc.num % 1 === 0
+                        ? Number(calc.num + value)
+                        : calc.num + value,
+                res: !calc.sign ? 0 : calc.res,
+            })
+        }
+    }
+
+    const commaClickHandler = (e) => {
+        e.preventDefault()
+        const value = e.target.innerHTML
+
+        setCalc({
+            ...calc,
+            num: !calc.num.toString().includes('.') ? calc.num + value : calc.num
+        })
+    }
 
     return (
         <div className="App">
             <div className="wrapper">
                 <main className="main">
                     <div className="main__container">
-                        <Calculator>
-                            <Top
-                                currentOperand={currentOperand}
-                                previousOperand={previousOperand}
-                                operation={operation}
-                            />
-                            <Bottom
-                                dispatch={dispatch}
-                            />
-                        </Calculator>
+                        <Wrapper>
+                            <Screen value={calc.num ? calc.num : calc.res} />
+                            <ButtonBox>
+                                {btnValues.flat().map((btn, i) => {
+                                    return (
+                                        <Button
+                                            key={i}
+                                            className={
+                                                btn === '=' ? 'equals' : ''
+                                            }
+                                            value={btn}
+                                            onClick={
+                                                btn === 'C'
+                                                    ? resetClickHandler
+                                                    : btn === '+-'
+                                                    ? invertClickHandler
+                                                    : btn === '%'
+                                                    ? percentClickHandler
+                                                    : btn === '='
+                                                    ? equalsClickHandler
+                                                    : btn === '/' ||
+                                                      btn === 'X' ||
+                                                      btn === '-' ||
+                                                      btn === '+'
+                                                    ? signClickHandler
+                                                    : btn === '.'
+                                                    ? commaClickHandler
+                                                    : numClickHandler
+                                            }
+                                        />
+                                    )
+                                })}
+                            </ButtonBox>
+                        </Wrapper>
                     </div>
                 </main>
             </div>
