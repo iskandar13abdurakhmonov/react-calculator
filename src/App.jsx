@@ -4,6 +4,7 @@ import Wrapper from './components/Wrapper'
 import Screen from './components/Screen'
 import ButtonBox from './components/ButtonBox'
 import Button from './components/Button'
+import Header from './components/Header'
 
 const btnValues = [
     [7, 8, 9, 'DEL'],
@@ -141,9 +142,10 @@ const App = () => {
                 <main className="main">
                     <div className="main__container">
                         <Wrapper>
-                            <button onClick={() => switchTheme()}>
-                                change theme
-                            </button>
+                            <Header
+                                theme={theme}
+                                switchTheme={switchTheme}
+                            />
                             <Screen
                                 theme={theme}
                                 value={calc.num ? calc.num : calc.res}

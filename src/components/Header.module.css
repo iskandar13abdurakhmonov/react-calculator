@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+}
+
+.logoDark {
+    color: hsl(0, 0%, 100%);
+}
+
+.logoLight {
+    color: hsl(60, 10%, 19%);
+}
+
+.logoBlue {
+    color: hsl(52, 100%, 62%);
+}
