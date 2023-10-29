@@ -9,38 +9,76 @@
     border-radius: 7px;
 }
 
-.keyWhite {
-    color: hsl(221, 14%, 31%);
+.darkKey {
     background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
     border-bottom: 4px solid hsl(28, 16%, 65%);
-    transition: 0.3s ease-in;
 }
 
-.keyWhite:hover {
-    background-color: hsl(0, 0%, 100%);
+.lightKey {
+    background-color: hsl(45, 7%, 89%);
+    color: hsl(60, 10%, 19%);
+    border-bottom: 4px solid hsl(35, 11%, 61%);
 }
 
-.keyBlue {
-    color: hsl(0, 0%, 100%);
-    text-transform: uppercase;
-    background-color: hsl(225, 21%, 49%);
-    border-bottom: 4px solid hsl(224, 28%, 35%);
-    transition: 0.3s ease-in;
+.blueKey {
+    background-color: hsl(268, 47%, 21%);
+    color: hsl(52, 100%, 62%);
+    border-bottom: 4px solid hsl(290, 70%, 36%);
 }
 
-.keyBlue:hover {
-    background-color: hsl(225, 51%, 76%);
-}
-
-.keyRed {
-    color: hsl(0, 0%, 100%);
+.equalsDarkKey {
     background-color: hsl(6, 63%, 50%);
     border-bottom: 4px solid hsl(6, 70%, 34%);
-    transition: 0.3s ease-in;
+    color: hsl(0, 0%, 100%);
 }
 
-.keyRed:hover {
-    background-color: hsl(6, 93%, 67%);
+.resetDarkKey {
+    background-color: hsl(225, 21%, 49%);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 4px solid hsl(224, 28%, 35%);
+}
+
+.deleteDarkKey {
+    background-color: hsl(225, 21%, 49%);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 4px solid hsl(224, 28%, 35%);
+}
+
+.equalsLightKey {
+    background-color: hsl(25, 98%, 40%);
+    border-bottom: 4px solid hsl(25, 99%, 27%);
+    color: hsl(0, 0%, 100%);
+}
+
+.resetLightKey {
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 4px solid hsl(185, 58%, 25%);
+}
+
+.deleteLightKey {
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 4px solid hsl(185, 58%, 25%);
+}
+
+.equalsBlueKey {
+    background-color: hsl(176, 100%, 44%);
+    border-bottom: 4px solid hsl(177, 92%, 70%);
+    color: hsl(198, 20%, 13%);
+}
+
+.resetBlueKey {
+    background-color: hsl(281, 89%, 26%);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 4px solid hsl(285, 91%, 52%);
+}
+
+.deleteBlueKey {
+    background-color: hsl(281, 89%, 26%);
+    color: hsl(0, 0%, 100%);
+    border-bottom: 4px solid hsl(285, 91%, 52%);
 }
 
 .bottomKeys {

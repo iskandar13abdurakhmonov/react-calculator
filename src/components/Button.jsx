@@ -6,25 +6,31 @@ const Button = ({ value, onClick, theme }) => {
 
     return (
         <button
-            style={
-                theme === 'dark'
-                    ? {
-                          backgroundColor: 'hsl(30, 25%, 89%)',
-                          color: 'hsl(221, 14%, 31%)',
-                      }
-                    : theme === 'light'
-                    ? {
-                          backgroundColor: 'hsl(45, 7%, 89%)',
-                          color: 'hsl(60, 10%, 19%)',
-                      }
-                    : {
-                          backgroundColor: 'hsl(268, 47%, 21%)',
-                          color: 'hsl(52, 100%, 62%)',
-                      }
-            }
             className={`${styles.key} ${
                 value === '=' || value === 'C' ? styles.bottomKeys : ''
-            } ${value === '=' ? styles.keyRed : ''}`}
+            } ${
+                theme === 'dark'
+                    ? styles.darkKey
+                    : theme === 'light'
+                    ? styles.lightKey
+                    : styles.blueKey
+            } ${
+                value === '=' && theme === 'dark' ? styles.equalsDarkKey : ''
+            } ${value === 'C' && theme === 'dark' ? styles.resetDarkKey : ''} ${
+                value === 'DEL' && theme === 'dark' ? styles.deleteDarkKey : ''
+            } ${
+                value === '=' && theme === 'light' ? styles.equalsLightKey : ''
+            } ${
+                value === 'C' && theme === 'light' ? styles.resetLightKey : ''
+            } ${
+                value === 'DEL' && theme === 'light'
+                    ? styles.deleteLightKey
+                    : ''
+            } ${
+                value === '=' && theme === 'blue' ? styles.equalsBlueKey : ''
+            } ${value === 'C' && theme === 'blue' ? styles.resetBlueKey : ''} ${
+                value === 'DEL' && theme === 'blue' ? styles.deleteBlueKey : ''
+            }`}
             onClick={onClick}
         >
             {value}

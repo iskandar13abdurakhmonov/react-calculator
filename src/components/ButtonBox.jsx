@@ -4,14 +4,13 @@ import styles from './ButtonBox.module.css'
 const ButtonBox = ({ children, theme }) => {
     return (
         <div
-            style={
+            className={`${styles.bottom} ${
                 theme === 'dark'
-                    ? { backgroundColor: 'hsl(223, 31%, 20%)' }
+                    ? styles.dark
                     : theme === 'light'
-                    ? { backgroundColor: 'hsl(0, 5%, 81%)' }
-                    : { backgroundColor: 'hsl(268, 71%, 12%)' }
-            }
-            className={styles.bottom}
+                    ? styles.light
+                    : styles.blue
+            }`}
         >
             <div className={styles.numpad}>{children}</div>
         </div>
