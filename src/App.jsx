@@ -5,8 +5,6 @@ import Screen from './components/Screen'
 import ButtonBox from './components/ButtonBox'
 import Button from './components/Button'
 
-import styles from './components/Button.module.css'
-
 const btnValues = [
     [7, 8, 9, 'DEL'],
     [4, 5, 6, '+'],
@@ -135,14 +133,9 @@ const App = () => {
 
     return (
         <div
-            style={
-                theme === 'dark'
-                    ? { backgroundColor: 'hsl(222, 26%, 31%)' }
-                    : theme === 'light'
-                    ? { backgroundColor: 'hsl(0, 0%, 90%)' }
-                    : { backgroundColor: 'hsl(268, 75%, 9%)' }
-            }
-            className="App"
+            className={`App ${
+                theme === 'dark' ? 'dark' : theme === 'light' ? 'light' : 'blue'
+            }`}
         >
             <div className="wrapper">
                 <main className="main">
@@ -161,23 +154,6 @@ const App = () => {
                                         <Button
                                             theme={theme}
                                             key={i}
-                                            className={`${styles.key} ${
-                                                styles.keyWhite
-                                            } ${
-                                                btn === '='
-                                                    ? styles.keyRed
-                                                    : btn === 'C'
-                                                    ? styles.keyBlue
-                                                    : btn === 'DEL'
-                                                    ? styles.keyBlue
-                                                    : ''
-                                            } ${
-                                                btn === '='
-                                                    ? styles.bottomKeys
-                                                    : btn === 'C'
-                                                    ? styles.bottomKeys
-                                                    : ''
-                                            }`}
                                             value={btn}
                                             onClick={
                                                 btn === 'C'

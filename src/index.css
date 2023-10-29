@@ -68,7 +68,19 @@ body {
 }
 
 .App {
+  
+}
+
+.dark {
   background-color: hsl(222, 26%, 31%);
+}
+
+.light {
+  background-color: hsl(0, 0%, 90%);
+}
+
+.blue {
+  background-color: hsl(268, 75%, 9%);
 }
 
 .main__container {

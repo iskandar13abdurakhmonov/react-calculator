@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
+import styles from './Button.module.css'
 
-const Button = ({ className, value, onClick, theme }) => {
-
-  console.log(className)
+const Button = ({ value, onClick, theme }) => {
+    console.log(value)
 
     return (
         <button
@@ -22,7 +22,9 @@ const Button = ({ className, value, onClick, theme }) => {
                           color: 'hsl(52, 100%, 62%)',
                       }
             }
-            className={className}
+            className={`${styles.key} ${
+                value === '=' || value === 'C' ? styles.bottomKeys : ''
+            } ${value === '=' ? styles.keyRed : ''}`}
             onClick={onClick}
         >
             {value}
