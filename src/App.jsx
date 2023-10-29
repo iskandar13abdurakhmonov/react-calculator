@@ -12,7 +12,7 @@ const btnValues = [
     [4, 5, 6, '+'],
     [1, 2, 3, '-'],
     ['.', 0, '/', 'x'],
-    ['C', '='],
+    ['RESET', '='],
 ]
 
 const toLocaleString = (num) =>
@@ -171,7 +171,7 @@ const App = () => {
                                             key={i}
                                             value={btn}
                                             onClick={
-                                                btn === 'C'
+                                                btn === 'RESET'
                                                     ? resetClickHandler
                                                     : btn === 'DEL'
                                                     ? deleteClickHandlder

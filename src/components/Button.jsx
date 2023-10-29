@@ -7,7 +7,7 @@ const Button = ({ value, onClick, theme }) => {
     return (
         <button
             className={`${styles.key} ${
-                value === '=' || value === 'C' ? styles.bottomKeys : ''
+                value === '=' || value === 'RESET' ? styles.bottomKeys : ''
             } ${
                 theme === 'dark'
                     ? styles.darkKey
@@ -16,19 +16,19 @@ const Button = ({ value, onClick, theme }) => {
                     : styles.blueKey
             } ${
                 value === '=' && theme === 'dark' ? styles.equalsDarkKey : ''
-            } ${value === 'C' && theme === 'dark' ? styles.resetDarkKey : ''} ${
+            } ${value === 'RESET' && theme === 'dark' ? styles.resetDarkKey : ''} ${
                 value === 'DEL' && theme === 'dark' ? styles.deleteDarkKey : ''
             } ${
                 value === '=' && theme === 'light' ? styles.equalsLightKey : ''
             } ${
-                value === 'C' && theme === 'light' ? styles.resetLightKey : ''
+                value === 'RESET' && theme === 'light' ? styles.resetLightKey : ''
             } ${
                 value === 'DEL' && theme === 'light'
                     ? styles.deleteLightKey
                     : ''
             } ${
                 value === '=' && theme === 'blue' ? styles.equalsBlueKey : ''
-            } ${value === 'C' && theme === 'blue' ? styles.resetBlueKey : ''} ${
+            } ${value === 'RESET' && theme === 'blue' ? styles.resetBlueKey : ''} ${
                 value === 'DEL' && theme === 'blue' ? styles.deleteBlueKey : ''
             }`}
             onClick={onClick}
