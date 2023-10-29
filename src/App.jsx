@@ -21,6 +21,20 @@ const toLocaleString = (num) =>
 const removeSpaces = (num) => num.toString().replace(/\s/g, '')
 
 const App = () => {
+    const [theme, setTheme] = useState('dark')
+
+    console.log(theme)
+
+    const switchTheme = () => {
+        if (theme === 'dark') {
+            setTheme('light')
+        } else if (theme === 'light') {
+            setTheme('blue')
+        } else {
+            setTheme('dark')
+        }
+    }
+
     let [calc, setCalc] = useState({
         sign: '',
         num: 0,
@@ -118,13 +132,20 @@ const App = () => {
             res: 0,
         })
     }
+
     return (
         <div className="App">
             <div className="wrapper">
                 <main className="main">
                     <div className="main__container">
                         <Wrapper>
-                            <Screen value={calc.num ? calc.num : calc.res} />
+                            <button onClick={() => switchTheme()}>
+                                change theme
+                            </button>
+                            <Screen
+                                theme={theme}
+                                value={calc.num ? calc.num : calc.res}
+                            />
                             <ButtonBox>
                                 {btnValues.flat().map((btn, i) => {
                                     return (
