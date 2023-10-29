@@ -2,7 +2,6 @@
 import styles from './Header.module.css'
 
 export default function Header({ switchTheme, theme }) {
-
     const handleRadioChange = (e) => {
         switchTheme(e.target.value)
     }
@@ -22,7 +21,7 @@ export default function Header({ switchTheme, theme }) {
             </span>
             <div className={styles.headerRight}>
                 <span
-                    className={`${styles.logo} ${
+                    className={`${styles.text} ${
                         theme === 'dark'
                             ? styles.logoDark
                             : theme === 'light'
@@ -32,10 +31,21 @@ export default function Header({ switchTheme, theme }) {
                 >
                     theme
                 </span>
-                <div>
+                <div
+                    className={`${styles.toggleSwitch} ${
+                        theme === 'dark'
+                            ? styles.bgDark
+                            : theme === 'light'
+                            ? styles.bgLight
+                            : styles.bgBlue
+                    }`}
+                >
                     <input
                         type="radio"
                         name="toggle-switch"
+                        className={`${styles.input} ${
+                            theme === 'dark' ? styles.inputDark : ''
+                        }`}
                         value="dark"
                         checked={theme === 'dark'}
                         onChange={handleRadioChange}
@@ -44,6 +54,9 @@ export default function Header({ switchTheme, theme }) {
                     <input
                         type="radio"
                         name="toggle-switch"
+                        className={`${styles.input} ${
+                            theme === 'light' ? styles.inputLight : ''
+                        }`}
                         value="light"
                         checked={theme === 'light'}
                         onChange={handleRadioChange}
@@ -52,12 +65,14 @@ export default function Header({ switchTheme, theme }) {
                     <input
                         type="radio"
                         name="toggle-switch"
+                        className={`${styles.input} ${
+                            theme === 'blue' ? styles.inputBlue : ''
+                        }`}
                         value="blue"
                         checked={theme === 'blue'}
                         onChange={handleRadioChange}
                     />
                 </div>
-                <button onClick={() => switchTheme()}>switch</button>
             </div>
         </div>
     )

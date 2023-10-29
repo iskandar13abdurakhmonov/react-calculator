@@ -1,11 +1,16 @@
 .header {
+    margin: 0 0 30px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
 
-.logo {
+.text {
+    margin: 4px 30px 0 0;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .logoDark {
@@ -18,4 +23,51 @@
 
 .logoBlue {
     color: hsl(52, 100%, 62%);
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+}
+
+.toggleSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 71px;
+    height: 26px;
+    border-radius: 9px;
+}
+
+.bgDark {
+    background-color: hsl(223, 31%, 20%);
+}
+
+.bgLight {
+    background-color: hsl(0, 5%, 81%);
+}
+
+.bgBlue {
+    background-color: hsl(268, 71%, 12%);
+}
+
+.input {
+    width: 17px;
+    height: 17px;
+    opacity: 0;
+}
+
+.inputDark:checked {
+    opacity: 1;
+    background-color: hsl(6, 63%, 50%);
+}
+
+.inputLight:checked {
+    opacity: 1;
+    background-color: hsl(6, 63%, 50%);
+}
+
+.inputBlue:checked {
+    opacity: 1;
+    background-color: hsl(6, 63%, 50%);
 }
