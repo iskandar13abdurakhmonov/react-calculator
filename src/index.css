@@ -7,24 +7,24 @@
 *,
 *::before,
 *::after {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul,
 ol,
 li {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 h1,
@@ -33,43 +33,41 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: inherit;
-    font-size: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 html,
 body {
-    height: 100%;
-    line-height: 1;
+  height: 100%;
+  line-height: 1;
 }
 
 body {
-    font-family: 'League Spartan', sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #000;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
 }
 
 .wrapper {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .main {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 
 [class*="__container"] {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.App {
-  
-}
+.App {}
 
 .dark {
   background-color: hsl(222, 26%, 31%);
@@ -94,117 +92,12 @@ body {
   width: 540px;
 }
 
-.top {
-  margin: 0 0 24px 0;
-  width: 100%;
-}
-
-.header-top {
-  margin: 0 0 31px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-logo {
-  margin: 0 0 0 0;
-  font-size: 25px;
-  color: hsl(30, 25%, 89%);
-}
-
-.switch {
-  display: flex;
-  align-items: center;
-}
-
-.switch-text {
-  margin: 0 0 0 0;
-  font-size: 18px;
-  font-weight: 700;
-  color: hsl(30, 25%, 89%);
-}
-
-.header-bottom {
-  padding: 41px 34px 41px 0;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  background-color: hsl(224, 36%, 15%);
-  border-radius: 8px;
-  max-height: 127px;
-}
-
-.output-panel {
-  color: hsl(30, 25%, 89%);
-  font-size: 38px;
-}
-
-.output {
-  background-color: transparent;
-}
-
-.bottom {
-  padding: 15px 15px 15px 15px;
-  width: 100%;
-  background-color: hsl(223, 31%, 20%);
-  border-radius: 8px;
-}
-
-.numpad {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: center;
-  align-items: center;
-}
-
-.key {
-  margin: 15px;
-  padding: 4px 0 0 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 101px;
-  height: 64px;
-  border-radius: 7px;
-}
-
-.key-white {
-  color: hsl(221, 14%, 31%);
-  background-color: hsl(30, 25%, 89%);
-  border-bottom: 4px solid hsl(28, 16%, 65%);
-  transition: 0.3s ease-in;
-}
-
-.key-white:hover {
-  background-color: hsl(0, 0%, 100%);
-}
-
-.key-blue {
+.attribution {
+  font-size: 11px;
+  text-align: center;
   color: hsl(0, 0%, 100%);
-  text-transform: uppercase;
-  background-color: hsl(225, 21%, 49%);
-  border-bottom: 4px solid hsl(224, 28%, 35%);
-  transition: 0.3s ease-in;
 }
 
-.key-blue:hover {
-  background-color: hsl(225, 51%, 76%);
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
-
-.key-red {
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(6, 63%, 50%);
-  border-bottom: 4px solid hsl(6, 70%, 34%);
-  transition: 0.3s ease-in;
-}
-
-.key-red:hover {
-  background-color: hsl(6, 93%, 67%);
-}
-
-.bottom-keys {
-  grid-column: 2 span;
-  max-width: 236px;
-}
-

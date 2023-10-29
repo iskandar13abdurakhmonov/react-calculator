@@ -195,6 +195,25 @@ const App = () => {
                         </Wrapper>
                     </div>
                 </main>
+                <footer className="footer">
+                    <div className="footer__container">
+                        <div className="attribution">
+                            Challenge by{' '}
+                            <a
+                                href="https://www.frontendmentor.io?ref=challenge"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Frontend Mentor
+                            </a>
+                            . Coded by{' '}
+                            <a href="https://www.frontendmentor.io/profile/iskandar13abdurakhmonov">
+                                eescan
+                            </a>
+                            .
+                        </div>
+                    </div>
+                </footer>
             </div>
         </div>
     )
