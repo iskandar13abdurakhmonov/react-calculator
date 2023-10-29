@@ -134,7 +134,16 @@ const App = () => {
     }
 
     return (
-        <div className="App">
+        <div
+            style={
+                theme === 'dark'
+                    ? { backgroundColor: 'hsl(222, 26%, 31%)' }
+                    : theme === 'light'
+                    ? { backgroundColor: 'hsl(0, 0%, 90%)' }
+                    : { backgroundColor: 'hsl(268, 75%, 9%)' }
+            }
+            className="App"
+        >
             <div className="wrapper">
                 <main className="main">
                     <div className="main__container">
@@ -146,10 +155,11 @@ const App = () => {
                                 theme={theme}
                                 value={calc.num ? calc.num : calc.res}
                             />
-                            <ButtonBox>
+                            <ButtonBox theme={theme}>
                                 {btnValues.flat().map((btn, i) => {
                                     return (
                                         <Button
+                                            theme={theme}
                                             key={i}
                                             className={`${styles.key} ${
                                                 styles.keyWhite

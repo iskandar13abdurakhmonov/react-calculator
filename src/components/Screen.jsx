@@ -13,7 +13,18 @@ const Screen = ({ theme, value }) => {
             }
             className={styles.headerBottom}
         >
-            <p className={styles.outputPanel}>{value}</p>
+            <p
+                style={
+                    theme === 'dark'
+                        ? { color: 'hsl(0, 0%, 100%)' }
+                        : theme === 'light'
+                        ? { color: 'hsl(60, 10%, 19%)' }
+                        : { color: 'hsl(52, 100%, 62%)' }
+                }
+                className={styles.outputPanel}
+            >
+                {value}
+            </p>
         </div>
     )
 }
