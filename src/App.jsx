@@ -1,3 +1,4 @@
+/* eslint-disable no-const-assign */
 import { useState } from 'react'
 
 import Wrapper from './components/Wrapper'
@@ -132,6 +133,18 @@ const App = () => {
         })
     }
 
+    const deleteClickHandlder = () => {
+        const newCalc = { ...calc }
+
+        let numString = newCalc.num.toString()
+
+        numString = numString.slice(0, -1)
+
+        newCalc.num = Number(numString)
+
+        setCalc(newCalc)
+    }
+
     return (
         <div
             className={`App ${
@@ -160,6 +173,8 @@ const App = () => {
                                             onClick={
                                                 btn === 'C'
                                                     ? resetClickHandler
+                                                    : btn === 'DEL'
+                                                    ? deleteClickHandlder
                                                     : btn === '+-'
                                                     ? percentClickHandler
                                                     : btn === '='
