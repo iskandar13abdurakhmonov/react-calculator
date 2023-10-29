@@ -85,3 +85,15 @@
     grid-column: 2 span;
     max-width: 236px;
 }
+
+@media (max-width: 500px) {
+    .key {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .key {
+        margin: 5px;
+    }
+}
